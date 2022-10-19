@@ -1,0 +1,7 @@
+"name","type","length","leftDigits","rightDigits"
+"id","INTEGER","3","3","0"
+"fingerprint","STRING","21","0","0"
+"createdAt","STRING","10","0","0"
+"updatedAt","STRING","10","0","0"
+"student","STRING","12","0","0"
+"subject","INTEGER","2","2","0"

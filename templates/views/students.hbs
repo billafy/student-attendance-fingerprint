@@ -1,0 +1,93 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<title>Students Record app</title>
+<link rel="stylesheet" href="faculty.css">
+<head>
+    {{>headerlinks}}
+</head>
+     {{>facultynavbar}}
+<style>
+    p{
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 200;
+        margin-left: 42px;
+    }
+    .main{
+       border-collapse: collapse;
+    margin: 15px 40px;
+    font-size: 16px;
+    width: 800px;
+        border-radius: 6px ;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        overflow: hidden;
+            }
+    .main thead tr{
+        background-color: var(--main-bg);
+        color: #fff;
+        text-align: left;
+        font-weight: bold;
+    }
+    .main th,
+    .main td{
+        padding: 12px 15px;
+    }
+    .main tbody tr{
+        border-bottom: 2px solid #ccc;
+    }
+    .main tbody tr:nth-of-type(even){
+      background-color: #f3f3f3;
+    }
+    .main tbody tr:last-of-type{
+        border-bottom: 2px solid var(--main-bg);
+    }
+    .active{
+
+       font-weight: bold;
+
+    }
+</style>
+
+
+<p>Showing students of {{faculty.branch}} branch</p>
+<section>
+     <table class="main">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Gender</th>
+                <th>Current Semester</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each students}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.id}}</td>
+                    <td>{{this.gender}}</td>
+                    <td>{{this.semester}}</td>
+                    <td><a href="/faculty/getStudentAttendance/{{this.id}}">View</a></td>
+                </tr>
+            {{/each}}
+
+        </tbody>
+     </table>
+</section>

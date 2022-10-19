@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {{>headerlinks}}
+    </head>
+    {{>navbar}}
+    <style>
+        .container {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+      .register {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+        background: #454545;
+        border-radius: 5px;
+        padding: 1.5rem 1rem;
+        margin: 3rem auto;
+      }
+      h2{
+        font-size: 28px;
+        font-weight: 600;
+        color: #FFFFFF;
+        text-align: center;
+      }
+    .details{
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        outline: none;
+        border: 0px solid black;
+        padding: 0.5rem 1.5rem;
+        border-bottom-width: 4px;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: block;
+      }
+      input[type='date'] {
+          text-transform: uppercase;
+          margin-top: 1rem;
+      }
+      input:focus{
+        border-color:var(--main-bg) ;
+      }
+       button {
+          font-size: 18px;
+          font-weight: 400;
+          padding: 10px 15px;
+          width: 100px;
+          margin: 1rem auto;
+          height: 100%;
+          border-radius: 5px;
+          display: block;
+          border: 0;
+          background: var(--main-bg);
+          justify-items: center;
+          background-color: #FFFFFF;
+          color: #000000;
+        }
+    </style>
+    <body>
+      <div class="container">
+        <div class="register">
+          <h2>Faculty Login</h2>
+          <form method='POST' action='/faculty/login'>
+            <div>
+              <label for="email"></label>
+              <input class="details" type="email" placeholder="Email" name="email">
+            </div>
+            <div>
+              <label for="password"></label>
+              <input class="details" type="password" placeholder="Password" name="password">
+            </div>
+            <p style='color: white; text-align: center'>{{error}}</p>
+            <div>
+              <button type="submit" >Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+    </html>
+</html>

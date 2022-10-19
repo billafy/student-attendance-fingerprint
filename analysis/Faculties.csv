@@ -1,0 +1,6 @@
+"id","name","email","password","gender","branch","createdAt","updatedAt"
+"0","Sulekha Saxena","sulekha@gmail.com","123","Female","Electronics & Telecommunication","2022-10-01","2022-10-01"
+"1","Neetoo Dholakia","neetoo@gmail.com","123","Female","Information Technology","2022-10-01","2022-10-01"
+"2","Ishita Dikshit","ishita@gmail.com","123","Female","Electronics & Telecommunication","2022-10-01","2022-10-01"
+"3","Rajeshwar Sagar","rajeshwar@gmail.com","123","Male","Computer","2022-10-01","2022-10-01"
+"4","Janardan Tandon","janardan@gmail.com","123","Male","Artificial Intelligence & Data Science","2022-10-01","2022-10-01"

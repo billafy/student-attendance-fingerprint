@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {{>headerlinks}}
+    </head>
+    {{>facultynavbar}}
+    
+    <style>
+    h1{
+        margin: 14px;
+        margin-left: 42px;
+        font-size: 28px;
+        color: var(--main-bg);
+    }
+    h3{
+         margin: 14px;
+        margin-left: 42px;
+    }
+    #subject{
+        margin: 14px;
+        margin-left: 20px;
+        font-size: 20px;
+        width: 180px;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 6px;
+    }
+    #subject:focus{
+        outline: none;
+    }
+    .main{
+       border-collapse: collapse;
+    margin: 15px 40px;
+    font-size: 16px;
+    width: 800px;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            }
+    .main thead tr{
+        background-color: var(--main-bg);
+        color: #fff;
+        text-align: left;
+        font-weight: bold;
+    }
+    .main th,
+    .main td{
+        padding: 12px 15px;
+    }
+    .main tbody tr{
+        border-bottom: 2px solid #ccc;
+    }
+    .main tbody tr:nth-of-type(even){
+      background-color: #f3f3f3;
+    }
+    .main tbody tr:last-of-type{
+        border-bottom: 2px solid var(--main-bg);
+    }
+    .active{
+
+       font-weight: bold;
+
+    }
+</style>
+
+
+
+
+<section>
+    <h1>Student Attendance Record</h1>
+    <h3>{{student.name}}'s attendance :</h3>
+    <h3>{{student.branch}} - Semester {{student.semester}}</h3>
+    <h3>Gender - {{student.gender}}</h3>
+    <h3>Email - {{student.email}}</h3>
+    <h3>Date of Birth - {{dateFormat student.dateOfBirth "MMMM Do YYYY"}}</h3>
+     <table class="main">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Attended Lectures</th>
+                <th>Total Lectures</th>
+                <th>Attendance Percentage</th>
+                <th>Dates Attended</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each student.attendances}}
+                <tr>
+                    <td>{{this.subjectName}}</td>
+                    <td>{{this.totalAttended}}</td>
+                    <td>{{this.totalLectures}}</td>
+                    <td>{{this.percentageAttended}}%</td>
+                    <td>
+                        {{#each this.list}}
+                            <p>{{dateFormat this.createdAt "MMMM Do YYYY"}}</p>
+                        {{/each}}
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+     </table>
+</section>

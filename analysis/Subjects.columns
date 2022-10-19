@@ -1,0 +1,7 @@
+"name","type","length","leftDigits","rightDigits"
+"id","INTEGER","2","2","0"
+"name","STRING","36","0","0"
+"semester","INTEGER","1","1","0"
+"branch","STRING","38","0","0"
+"createdAt","STRING","10","0","0"
+"updatedAt","STRING","10","0","0"
