@@ -1,0 +1,150 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<title>Students Record app</title>
+<link rel="stylesheet" href="student.css">
+
+<style>
+    h1{
+        margin: 14px;
+        font-size: 28px;
+        color: var(--main-bg);
+    }
+   p{
+        margin: 14px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    #subject{
+        margin: 14px;
+        font-size: 20px;
+        width: 180px;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 6px;
+    }
+    #subject:focus{
+        outline: none;
+    }
+    .main{
+        border-collapse: collapse;
+        margin: 30px 30px;
+        font-size: 16px;
+        min-width: 500px;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            }
+    .main thead tr{
+        background-color: var(--main-bg);
+        color: #fff;
+        text-align: left;
+        font-weight: bold;
+    }
+    .main th,
+    .main td{
+        padding: 12px 15px;
+    }
+    .main tbody tr{
+        border-bottom: 2px solid #ccc;
+    }
+    .main tbody tr:nth-of-type(even){
+      background-color: #f3f3f3;
+    }
+    .main tbody tr:last-of-type{
+        border-bottom: 2px solid var(--main-bg);
+    }
+    .active{
+        
+       font-weight: bold;
+       
+    }
+</style>
+
+
+<div class="container-fluid main_menu" >
+    <div class="row"  id="navbar">
+        <div class="col-md-10 col-12 mx-auto">
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="#"> <i class="far fa-snowflake"></i> Students Record app  <i class="far fa-snowflake"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/defaulter">Defaulter</a>
+                    </li>
+                    
+              
+                  </ul>
+                  
+                </div>
+              </nav>
+        </div>
+
+    </div>
+</div>
+
+<section>
+   <p>Name: Prathamesh Mhatre</p>
+   <p>ID No: VU4F1920078</p>
+   <p>Branch: Information Technology</p>
+   <p>Year: Final Year</p>
+   <p>Semester: 7</p>
+    <div>
+        <select id="subject">
+            <option>Select a subject</option>
+            <option>IRS</option>
+            <option>IOE</option>
+            <option>AI&DS-II</option>
+            <option>STQA</option>
+            <option>CSL</option>
+        </select>
+    </div>
+     <table class="main">
+        <thead>
+            <tr>
+              
+                <th>Today</th>
+                <th>This Week</th>
+                <th>This Month</th>
+                <th>Total</th>
+                <th>percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="active">
+                
+                <th>Present</th>
+                <td>1</td>
+                <td>7</td>
+                <td>12</td>
+                <td>58%</td>
+            </tr>
+           
+        </tbody>
+     </table>
+</section>
+
+
+
+

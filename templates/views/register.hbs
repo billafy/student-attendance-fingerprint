@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>headerlinks}}
+</head>
+
+
+{{>navbar}}
+<!-- main header -->
+<style>
+  .container{
+      margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .register {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    
+    border-radius: 10px;
+  }
+
+  h2{
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+ 
+.details{
+    height: 100%;
+    width: 80%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    outline: none;
+    border: 1px solid gray;
+    padding: 8px 20px;
+    margin-left: 46px;
+ 
+    border-bottom-width: 4px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+  input:focus{
+    border-color:var(--main-bg) ;
+  }
+
+
+   button {
+      font-size: 18px;
+      font-weight: 400;
+      margin: 20px 0;
+      padding: 10px 15px;
+      width: 80%;
+      height: 100%;
+      border-radius: 5px;
+      border: 0;
+      background: var(--main-bg);
+      color: #fff;
+      justify-items: center;
+      margin-left: 46px;
+    }
+    footer{
+      padding: 10px;  
+      background-color: #fff; }
+</style>
+
+<body>
+  <div class="container">
+    <div class="register">
+      <h2>Registration Form</h2>
+      <form >
+        <div>
+          <label for="name"></label>
+          <input class="details" type="text" placeholder="Enter your Full Name" id="name">
+        </div>
+        <div>
+          <label for="emailID"></label>
+          <input class="details" type="email" placeholder="Enter your Email ID" id="emailID">
+        </div>
+        <div>
+          <label for="id"></label>
+          <input class="details" type="text" placeholder="Enter your ID No." id="id">
+        </div>
+        <div>
+          <label for="number"></label>
+          <input class="details" type="number" placeholder="Enter your Contact No." id="number">
+        </div>
+        <div>
+          <label for="gender"></label>
+          <select class="details"  id="gender">
+            <option>Select a Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <div>
+          <label for="year"></label>
+          <select class="details"  id="currentYear">
+            <option>Select your Current Year</option>
+            <option>First Year</option>
+            <option>Second Year</option>
+            <option>Third Year</option>
+            <option>Final Year</option>
+          </select>
+        </div>
+        <div>
+          <label for="branch"></label>
+           <select class="details"  id="branch">
+            <option>Select your Branch</option>
+            <option>Information Technology</option>
+            <option>Computer Science</option>
+            <option>Electronics & Telecommunication</option>
+            <option>Artificial Intelligence & Data Science</option>
+          </select>
+        </div>
+         <div>
+          <label for="semester"></label>
+          <select class="details"  id="semester">
+            <option>Select your Current Semester</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </div>
+         <div>
+          <label for="number"></label>
+          <input class="details" type="date" placeholder="Enter your Date of Birth" id="dateOfBirth">
+        </div>
+        
+        <div>
+          <button type="submit" >Sign in</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <footer>
+
+  </footer>
+</body>
+
+</html>
